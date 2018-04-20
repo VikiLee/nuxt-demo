@@ -3,7 +3,8 @@ import axios from 'axios'
 import apiConfig from '~/api.config'
 
 const service = axios.create({
-  baseURL: apiConfig.baseUrl + 'api'
+  baseURL: apiConfig.baseUrl + 'api',
+  withCredentials: true // 允许携带cookie
 })
 
 // 拦截器
